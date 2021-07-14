@@ -1,0 +1,347 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link href="https://use.fontawesome.com/releases/v5.0.7/css/all.css" rel="stylesheet">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+<title>Persons Manage Page</title>
+<style>
+tr,td {
+	border: 3px solid #bbbbbb;
+	margin: auto;
+	text-align: center;
+	padding: 20px;
+	text-transform: capitalize;
+}
+table {
+	border: 5px solid #bbbbbb;
+	text-align: center;
+  margin: auto;
+}
+#postdiv{	
+  background: #efefef; 
+  background: linear-gradient(top, #efefef 0%, #bbbbbb 100%);  
+  background: -moz-linear-gradient(top, #efefef 0%, #bbbbbb 100%); 
+  background: -webkit-linear-gradient(top, #efefef 0%,#bbbbbb 100%); 
+  transition: all 0.5s;
+ 	text-align: center;
+ 	width: 500px;
+ 	position: relative;
+  margin: auto;
+  border-radius: 20px;
+  border: 4px double #cccccc;
+  padding: 10px;
+}
+#postimg {
+	display: block;
+  border-radius: 20px;
+	width: 450px;
+	height: 420px;
+	backface-visibility: hidden;
+	text-align: center;
+	position: relative;
+  margin: auto;
+}
+#postp {
+	font-size: 20px;
+	text-align: center;
+}  
+
+div a{
+  float: right;
+  width: 100%;
+  font-size: 18px;
+  text-align: center;
+  position: relative;
+  background: #efefef; 
+  background: linear-gradient(top, #efefef 0%, #bbbbbb 100%);  
+  background: -moz-linear-gradient(top, #efefef 0%, #bbbbbb 100%); 
+  background: -webkit-linear-gradient(top, #efefef 0%,#bbbbbb 100%); 
+  transition: all 0.5s;
+  border-radius: 20px;
+  border: 4px double #5a5757;
+}
+#blog {
+	opacity: 1;
+	display: block;
+	width: 100%;
+	height: 100% ;
+	backface-visibility: hidden;
+	text-align: center;
+}
+#blogimg {
+	opacity: 1;
+	display: block;
+	width: 380px;
+	height: 300px ;
+	backface-visibility: hidden;
+	text-align: center;
+  margin: 5px;
+  border-radius: 20px;
+}
+#sol{
+  float: right;
+  width: 400px;
+  text-align: center;
+  position: relative;
+  margin:90px;
+  background: #efefef; 
+  background: linear-gradient(top, #efefef 0%, #bbbbbb 100%);  
+  background: -moz-linear-gradient(top, #efefef 0%, #bbbbbb 100%); 
+  background: -webkit-linear-gradient(top, #efefef 0%,#bbbbbb 100%); 
+  transition: all 0.5s;
+  border-radius: 20px;
+  border: 4px double #cccccc;
+}
+
+button {
+      display: inline-block;
+      background-color: red;
+      border-radius: 10px;
+      border: 4px double #cccccc;
+      color: #eeeeee;
+      text-align: center;
+      font-size: 20px;
+      padding: 20px;
+      width: 200px;
+      transition: all 0.5s;
+      cursor: pointer;
+      margin: 5px;
+ }
+button span {
+      cursor: pointer;
+      display: inline-block;
+      position: relative;
+      transition: 0.5s;
+}
+button span:after {
+      content: '\00bb';
+      position: absolute;
+      opacity: 0;
+      top: 0;
+      right: -20px;
+      transition: 0.5s;
+}
+button:hover {
+      background-color:violet;
+}
+button:hover span {
+      padding-right: 25px;
+}
+button:hover span:after {
+      opacity: 1;
+      right: 0;
+}
+
+
+nav {
+  text-align: center;
+  margin: 30px 0;
+}
+nav ul ul {
+  display: none;
+}
+nav ul li:hover > ul {
+  display: block;
+}
+nav ul {
+  background: #efefef; 
+  background: linear-gradient(top, #efefef 0%, #bbbbbb 100%);  
+  background: -moz-linear-gradient(top, #efefef 0%, #bbbbbb 100%); 
+  background: -webkit-linear-gradient(top, #efefef 0%,#bbbbbb 100%); 
+  box-shadow: 0px 0px 9px rgba(0,0,0,0.15);
+  padding: 0 20px;
+  border-radius: 7px;  
+  list-style: none;
+  position: relative;
+  display: inline-table;
+}
+nav ul:after {
+    content: ""; 
+    clear: both; 
+    display: block;
+  }
+nav ul li {
+  float: left;
+}
+nav ul li:hover {
+    background: #91a6c0;
+    background: linear-gradient(top, #91a6c0 0%, #a1acb9 40%);
+    background: -moz-linear-gradient(top, #91a6c0 0%, #a1acb9 40%);
+    background: -webkit-linear-gradient(top, #91a6c0 0%,#a1acb9 40%);
+  }
+nav ul li:hover a {
+      color: #fff;
+    }
+nav ul li a {
+  display: block; 
+  padding: 15px 30px;
+  color: red; 
+  text-decoration: none;
+  font-size: 20px;
+}
+nav ul p{
+  display: block; 
+  padding: 15px 30px;
+  color: red; 
+  text-decoration: none;
+  font-size: 20px;
+}
+nav ul p:hover p{
+  color: #fff;
+}
+
+#blogdir{
+  float: left;
+  width: 80%;
+  margin-left: 220px;
+  padding: 10px;
+  text-align: center;
+  position: relative;
+  background: #efefef; 
+  background: linear-gradient(top, #efefef 0%, #bbbbbb 100%);  
+  background: -moz-linear-gradient(top, #efefef 0%, #bbbbbb 100%); 
+  background: -webkit-linear-gradient(top, #efefef 0%,#bbbbbb 100%); 
+  transition: all 0.5s;
+  border-radius: 20px;
+  border: 4px double #cccccc;
+	}
+		
+#aboutp{ 
+  float: left;
+  padding: 40px;
+  text-align: center;
+  position: relative;
+  background: #efefef; 
+  background: linear-gradient(top, #efefef 0%, #bbbbbb 100%);  
+  background: -moz-linear-gradient(top, #efefef 0%, #bbbbbb 100%); 
+  background: -webkit-linear-gradient(top, #efefef 0%,#bbbbbb 100%); 
+  transition: all 0.5s;
+  border-radius: 20px;
+  border: 4px double #cccccc;
+}
+
+* {box-sizing:border-box}
+    #bir{
+      float: left;
+      width: 80%;
+      margin-left: 220px;
+      padding: 10px;
+      text-align: center;
+      position: relative;
+      background: #efefef; 
+      background: linear-gradient(top, #efefef 0%, #bbbbbb 100%);  
+      background: -moz-linear-gradient(top, #efefef 0%, #bbbbbb 100%); 
+      background: -webkit-linear-gradient(top, #efefef 0%,#bbbbbb 100%); 
+      transition: all 0.5s;
+      border-radius: 20px;
+      border: 4px double #cccccc;
+    }
+    #iki{
+      padding: 20px;
+      text-align: center;
+      position: relative;
+      background: #efefef; 
+      background: linear-gradient(top, #efefef 0%, #bbbbbb 100%);  
+      background: -moz-linear-gradient(top, #efefef 0%, #bbbbbb 100%); 
+      background: -webkit-linear-gradient(top, #efefef 0%,#bbbbbb 100%); 
+      transition: all 0.5s;
+      border-radius: 20px;
+      border: 4px double #cccccc;
+    }
+		body {
+			font-family: Verdana,sans-serif;
+			bacground-color: #F0F8FF;
+		}
+		.mySlides {display:none}
+		img{
+      border-radius: 20px;
+    }
+		/* Slideshow container */
+		.slideshow-container {
+		  max-width: 1000px;
+		  position: relative;
+		  margin: auto;
+		}
+		
+		/* Caption text */
+		.text {
+		  color: #f2f2f2;
+		  font-size: 15px;
+		  padding: 8px 12px;
+		  position: absolute;
+		  bottom: 8px;
+		  width: 100%;
+		  text-align: center;
+		}
+		
+		/* Number text (1/3 etc) */
+		.numbertext {
+		  color: #f2f2f2;
+		  font-size: 12px;
+		  padding: 8px 12px;
+		  position: absolute;
+		  top: 0;
+		}
+		
+		/* The dots/bullets/indicators */
+		.dot {
+		  height: 13px;
+		  width: 13px;
+		  margin: 0 2px;
+		  background-color: #bbb;
+		  border-radius: 50%;
+		  display: inline-block;
+		  transition: background-color 0.6s ease;
+		}
+		
+		.active {
+		  background-color: #717171;
+		}
+		
+		/* Fading animation */
+		.fade {
+		  -webkit-animation-name: fade;
+		  -webkit-animation-duration: 1.5s;
+		  animation-name: fade;
+		  animation-duration: 1.5s;
+		}
+		
+		@-webkit-keyframes fade {
+		  from {opacity: .4} 
+		  to {opacity: 1}
+		}
+		
+		@keyframes fade {
+		  from {opacity: .4} 
+		  to {opacity: 1}
+		}
+		
+		/* On smaller screens, decrease text size */
+		@media only screen and (max-width: 300px) {
+		  .text {font-size: 11px}
+		}
+	
+		.mySlides {display:none;}
+	
+		.baslik{
+			margin-right: 390px;
+			margin-top: 20px;
+		}
+		
+		.baslik img{
+            width: 800px;
+            height: 180px;
+            padding-left: 390px;
+            padding-top: 10px;
+            position: relative;
+        }
+
+</style>
+</head>
+<body>
+             {{{body}}}
+</body>
+</html>

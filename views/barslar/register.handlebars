@@ -1,0 +1,31 @@
+{{>nav}}
+<form action ="/users/register" method="POST" >
+		<table>
+			<tr>
+				<td><h2 style="color:black; text-shadow:3px 2px red; font-size:30px;">Please register!</h2></td>
+			</tr>
+			<tr>
+				<td> <i class="fas fa-star"></i>
+					Name : <input type="text" name="name"  required> </td>
+			</tr>
+			<tr>
+				<td> <i class="glyphicon glyphicon-user"></i>
+					User Name : <input type="text" name="username"  required> </td>
+			</tr>
+			<tr>
+				<td> <i class="fas fa-key"></i>
+					Password : <input type="password" name="password"  required>  </td>	
+			</tr>
+			<tr>
+				<td> <i class="glyphicon glyphicon-envelope"></i>
+					Email : <input type="email" name="email"  required>  </td>
+			</tr>
+			<tr> 
+				<td> <i class="fas fa-mobile-alt"></i>
+					Phone : <input type="text" name="tel"  pattern="[0-9]{11}" title="11 haneli"  required>  </td>
+			</tr>
+			<tr>
+				<td> <button type="submit" class="main-btn" id="loginbt"><span>Register</span></button> </td> 
+			</tr>
+		</table>
+</form>

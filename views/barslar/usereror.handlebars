@@ -1,0 +1,19 @@
+{{>nav}}
+<form action ="/users/login" method="POST" >
+	<table>		
+		<tr>
+			<td><h2 style="color:black; text-shadow:3px 2px red; font-size:30p">Your password is wrong !!Please try again.</h2></td>
+		</tr>
+		<tr>
+			<td> <i class="glyphicon glyphicon-user"></i>
+				User Name : <input type="text" name="username" required> </td>
+		</tr>
+		<tr>
+			<td> <i class="fas fa-key"></i>
+				Password :  <input type="password" name="password" required>  </td>	
+		</tr>
+		<tr>
+			<td> <button type="submit" class="main-btn" id="loginbt"><span>Login</span></button> </td> 
+		</tr>
+	</table>
+</form>

@@ -1,0 +1,29 @@
+{{>nav}}
+|<div id=bir>
+    <h2 class="w3-center">Welcome,If you want to know the best places to visit in Istanbul, please log in.</h2>
+    <div id=iki class="w3-content w3-section" style="max-width:500px">
+        <img class="mySlides" src="https://i.hizliresim.com/qAon2d.jpg" style="width:100%" title="Register for details.">
+        <img class="mySlides" src="https://i.hizliresim.com/qAon3Z.jpg" style="width:100%" title="Register for details.">
+        <img class="mySlides" src="https://i.hizliresim.com/lQaR7g.jpg" style="width:100%" title="Register for details.">
+        <img class="mySlides" src="https://i.hizliresim.com/yG79lN.jpg" style="width:100%" title="Register for details.">
+        <img class="mySlides" src="https://i.hizliresim.com/1pQ0k5.jpg" style="width:100%" title="Register for details.">
+        <img class="mySlides" src="https://i.hizliresim.com/qAonRq.jpg" style="width:100%" title="Register for details.">
+    </div>
+</div>
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+</script>
